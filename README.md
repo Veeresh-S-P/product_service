@@ -35,19 +35,9 @@
 ---
 
 
-#### 5. `GET /api/products/top-expensive(http://localhost:8080/api/products/top-expensive?n=5)`
+#### 5. `GET /api/products/`
 
- ``` [
-    {
-      "title": "Expensive Product",
-      "price": 999,
-      "description": "High-end product",
-      "category": "electronics",
-      "image": "https://example.com/expensive.jpg",
-      "rating": 3,
-      
-    }
-  ]
+ ``` 
   ```
 ---
 #### 6. `GET /api/products/top-sellers`
@@ -75,25 +65,9 @@
   }
   ```
 ---
-#### 9. `POST /api/products`
-
-  
-- **Response:**
-  ```
-  {
-    "title": "Product Title",
-    "price": 100,
-    "description": "Product Description",
-    "category": "electronics",
-    "image": "https://example.com/image.jpg",
-    "rating": 3,
-    "userId": "60d0fe4f5311236168a109ca"
-  }
-  ```
----
 
 
-#### 11. `DELETE /api/products/:id`
+#### 9. `DELETE /api/products/:id`
 
 - **Response:**
   ```json
