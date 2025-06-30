@@ -31,7 +31,8 @@
   },
   ]
 
-
+```
+---
 
 
 #### 5. `GET /api/products/top-expensive(http://localhost:8080/api/products/top-expensive?n=5)`
@@ -43,11 +44,8 @@
       "description": "High-end product",
       "category": "electronics",
       "image": "https://example.com/expensive.jpg",
-      "rating": {
-        "rate": 4.9,
-        "count": 100
-      },
-      "userId": "60d0fe4f5311236168a109ca"
+      "rating": 3,
+      
     }
   ]
   ```
@@ -70,15 +68,12 @@
 - **Response:**
   ```json
   {
-    "title": "Product Name",
-    "price": 100,
-    "description": "Product Description",
+    "title": "name",
+    "price": 'price in number',
+    "description": "Product Desc",
     "category": "electronics",
     "image": "https://example.com/product.jpg",
-    "rating": {
-      "rate": 4.0,
-      "count": 50
-    },
+    "rating":3,
     "userId": "60d0fe4f5311236168a109ca"
   }
   ```
@@ -92,10 +87,7 @@
     "description": "Product Description",
     "category": "electronics",
     "image": "https://example.com/image.jpg",
-    "rating": {
-      "rate": 4.5,
-      "count": 120
-    }
+    "rating": 3
   }
   ```
 - **Response:**
@@ -106,10 +98,7 @@
     "description": "Product Description",
     "category": "electronics",
     "image": "https://example.com/image.jpg",
-    "rating": {
-      "rate": 4.5,
-      "count": 120
-    },
+    "rating": 3,
     "userId": "60d0fe4f5311236168a109ca"
   }
   ```
