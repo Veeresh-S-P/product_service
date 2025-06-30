@@ -11,7 +11,7 @@ const getproducts=async(req,res)=>{
 }
 
 const postproduct=async(req,res)=>{
-    
+
     const {title,price,description,category,imageurl,ratings}=req.body
     try{
         const newProduct=new productModel({
@@ -98,9 +98,7 @@ const TopSellers=async(req,res)=>{
     const {n=3}=req.query
     try {
         const products=await productModel.aggregate([
-            { $group:{_id:"$createdby",count:{ $sum: 1 }}},
-            { $sort:{count:-1}},
-            { $limit:Number(n)}
+            
         ]);
         res.json(products);
     } catch(err){
