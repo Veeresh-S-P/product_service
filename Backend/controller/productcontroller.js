@@ -11,7 +11,7 @@ const getproducts=async(req,res)=>{
 }
 
 const postproduct=async(req,res)=>{
-
+    
     const {title,price,description,category,imageurl,ratings}=req.body
     try{
         const newProduct=new productModel({
@@ -71,8 +71,7 @@ const paginateprod=async(req, res)=>{
         const totalProducts = await productModel.countDocuments()
         res.json({
             products,
-            totalPages: Math.ceil(totalProducts / limit),
-            currentPage: Number(page)
+          
         });
     } catch (err) {
         res.send(err.message)
@@ -96,10 +95,11 @@ const ExpensivefiveProducts =async(req,res)=>{
 
 const TopSellers=async(req,res)=>{
     const {n=3}=req.query
-    try {
-        const products=await productModel.aggregate([
+    try { 
+        const products=await productModel.find(
             
-        ]);
+            
+        );
         res.json(products);
     } catch(err){
         res.send(err.message)
